@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="0f29f2f0-2bd2-4b97-a26d-0fdd40cc72ba" name="Portfolio" url="http://ftp.abdullahiftikhar.com">
+        <fileTransfer host="ftp.abdullahiftikhar.com" port="21">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
