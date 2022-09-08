@@ -1,4 +1,4 @@
-<nav class="navbar navbar-expand-lg fixed-top ftco-navbar-light" id="navbar">
+<nav class="navbar navbar-expand-lg fixed-top ftco-navbar-light {{(request()->is('blog') || request()->is('blog/*')) ? 'expect-home' :""}}" id="navbar">
     <div class="container">
         <a class="navbar-brand align-items-center" href="{{route('index')}}">
             Abdullah Iftikhar
@@ -14,7 +14,7 @@
                 <li class="nav-item"><a class="nav-link" href="#services">Services</a></li>
                 <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
                 <li class="nav-item"><a class="nav-link" href="#pricing">Pricing</a></li>
-{{--                <li class="nav-item"><a class="nav-link" href="#blog">Blog</a></li>--}}
+                <li class="nav-item"><a class="nav-link" href="{{--#blog--}} {{route('blog')}}">Blog</a></li>
                 <li class="nav-item"><a class="nav-link" href="#contactme">Contact</a></li>
             </ul>
         </div>
