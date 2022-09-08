@@ -7,6 +7,11 @@
                 Dashboard</a>
         </li>
 
+        <li class="sidebar-nav-item">
+            <a href="{{route('dashboard')}}" class="sidebar-nav-link"><i class="icon ion-ios-book"></i>
+                Blog</a>
+        </li>
+
 {{--        <li class="sidebar-nav-item with-sub">--}}
 {{--            <a href="" class="sidebar-nav-link"><i class="icon ion-person"></i>Vendor</a>--}}
 {{--            <ul class="nav sidebar-nav-sub">--}}
