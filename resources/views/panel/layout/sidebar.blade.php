@@ -8,8 +8,20 @@
         </li>
 
         <li class="sidebar-nav-item">
+            <a href="{{route('tag.index')}}" class="sidebar-nav-link">
+                <i class="icon ion-ios-toggle"></i>Tags
+            </a>
+        </li>
+
+        <li class="sidebar-nav-item">
+            <a href="{{route('thumbnail.index')}}" class="sidebar-nav-link">
+                <i class="icon ion-ios-thunderstorm"></i>Blog Image
+            </a>
+        </li>
+
+        <li class="sidebar-nav-item">
             <a href="{{route('dashboard')}}" class="sidebar-nav-link"><i class="icon ion-ios-book"></i>
-                Blog</a>
+                Blog Post</a>
         </li>
 
 {{--        <li class="sidebar-nav-item with-sub">--}}

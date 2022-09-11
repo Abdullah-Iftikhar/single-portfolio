@@ -33,8 +33,18 @@ Route::get('/blog/detail', function () {
 })->name('blog.detail');
 
 Route::group(['prefix' => 'admin'], function () {
-    Route::group(['middleware' => 'verified'], function () {
+    Route::group(['middleware' => ['verified', 'auth']], function () {
         Route::get('/dashboard', '\App\Http\Controllers\DashboardController@dashboard')->name('dashboard');
+
+        //Tags
+        Route::get('/tags', '\App\Http\Controllers\TagController@index')->name('tag.index');
+        Route::post('/add/tag', '\App\Http\Controllers\TagController@store')->name('tag.store');
+        Route::get('/delete/tag/{id}', '\App\Http\Controllers\TagController@destroy')->name('tag.delete');
+
+        //Thumbnail
+        Route::get('/thumbnails', '\App\Http\Controllers\ThumbnailController@index')->name('thumbnail.index');
+        Route::post('/add/thumbnail', '\App\Http\Controllers\ThumbnailController@store')->name('thumbnail.store');
+        Route::get('/delete/thumbnail/{id}', '\App\Http\Controllers\ThumbnailController@destroy')->name('thumbnail.delete');
     });
 });
 

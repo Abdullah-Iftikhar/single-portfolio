@@ -226,7 +226,7 @@
 {{--                                <div class="media">--}}
 {{--                                    <div class="activity-icon bg-primary">--}}
 {{--                                        <i class="icon @if($activities->type == "brand") ion-person--}}
-{{--                                        @endif @if($activities->type == "product") ion-grid @endif--}}
+{{--                                        @endif @if($activities->type == "blog-post") ion-grid @endif--}}
 {{--                                        @if($activities->type == "category") ion-grid @endif--}}
 {{--                                        @if($activities->type == "price_list") ion-document-text @endif">--}}
 {{--                                        </i>--}}
