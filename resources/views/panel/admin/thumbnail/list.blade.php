@@ -16,11 +16,11 @@
     {{--Start Content--}}
     <div class="section-wrapper">
 
-        <form action="{{route('thumbnail.store')}}" method="post" enctype="multipart/form-data">
+        <form action="{{route('thumbnail.store')}}" data-parsley-validate method="post" enctype="multipart/form-data">
             @csrf
             <div class="row">
                 <div class="col-lg-6 col-md-6 col-sm-12 pd-b-20">
-                    <input class="form-control"
+                    <input class="form-control" required
                            value="{{old('title')}}" type="text"
                            id="title" placeholder="Write title" name="title">
                     @if($errors->has('title'))
@@ -30,7 +30,7 @@
                 </div>
 
                 <div class="col-lg-5 col-md-5 col-sm-12 pd-b-20">
-                    <input class="form-control" type="file" name="thumbnail">
+                    <input class="form-control" required type="file" name="thumbnail">
                     @if($errors->has('thumbnail'))
                         <div class="error"
                              style="color:red">{{$errors->first('thumbnail')}}</div>

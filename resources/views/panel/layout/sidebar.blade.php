@@ -20,7 +20,7 @@
         </li>
 
         <li class="sidebar-nav-item">
-            <a href="{{route('dashboard')}}" class="sidebar-nav-link"><i class="icon ion-ios-book"></i>
+            <a href="{{route('blog.create')}}" class="sidebar-nav-link"><i class="icon ion-ios-book"></i>
                 Blog Post</a>
         </li>
 

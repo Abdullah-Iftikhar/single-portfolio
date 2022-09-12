@@ -1,7 +1,7 @@
 <div class="slim-header with-sidebar">
     <div class="container-fluid">
         <div class="slim-header-left">
-            <h2 class="slim-logo"><a href="#"><small>Study Amazon</small></a></h2>
+            <h2 class="slim-logo"><a href="#"><small>Admin</small></a></h2>
             <a href="" id="slimSidebarMenu" class="slim-sidebar-menu"><span></span></a>
             {{--            <form action="{{route('admin.vendor.list')}}" method="get">--}}
             {{--                <div class="search-box">--}}

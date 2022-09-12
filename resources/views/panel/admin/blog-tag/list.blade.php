@@ -36,11 +36,11 @@
     {{--Start Content--}}
     <div class="section-wrapper">
 
-        <form action="{{route('tag.store')}}" method="post">
+        <form action="{{route('tag.store')}}" data-parsley-validate method="post">
             @csrf
            <div class="row">
                <div class="col-lg-11 col-md-11 col-sm-12 pd-b-20">
-                   <input class="form-control"
+                   <input class="form-control" required
                           value="{{old('tag')}}" type="text"
                           id="tag" placeholder="Write Tag Name" name="tag">
                    @if($errors->has('tag'))

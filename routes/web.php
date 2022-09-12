@@ -27,6 +27,9 @@ Route::get('/blog', function () {
     return view('blog');
 })->name('blog');
 
+Route::get('/blogs', '\App\Http\Controllers\BlogController@index')->name('blog');
+Route::get('/blog/detail/{slug}', '\App\Http\Controllers\BlogController@detail')->name('blog');
+
 
 Route::get('/blog/detail', function () {
     return view('blog-detail');
@@ -35,6 +38,10 @@ Route::get('/blog/detail', function () {
 Route::group(['prefix' => 'admin'], function () {
     Route::group(['middleware' => ['verified', 'auth']], function () {
         Route::get('/dashboard', '\App\Http\Controllers\DashboardController@dashboard')->name('dashboard');
+
+        //Blog
+        Route::get('/blog/create', '\App\Http\Controllers\BlogController@create')->name('blog.create');
+        Route::post('/blog/store', '\App\Http\Controllers\BlogController@store')->name('blog.store');
 
         //Tags
         Route::get('/tags', '\App\Http\Controllers\TagController@index')->name('tag.index');
